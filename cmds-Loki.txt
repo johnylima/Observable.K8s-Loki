@@ -1,0 +1,13 @@
+Install Loki https://artifacthub.io/packages/helm/grafana/loki-stack
+
+helm repo add grafana https://grafana.github.io/helm-charts
+helm repo update
+helm upgrade --install loki --namespace=loki grafana/loki-stack
+
+kubectl get pods -n loki
+
+kubectl get svc -n loki
+
+filter on loki
+{namespace="hipster-shop",stream="stdout"} | json | http_resp_took_ms >10
+rate({namespace="hipster-shop" } |="stdout" !="error" |= "debug" |="http.resp.took_ms" [30s]) 
