@@ -1,9 +1,5 @@
-# Is it Observable?
-<p align="center"><img src="/image/logo.png" width="40%" alt="Prometheus Logo" /></p>
-
 ## K8s and Loging with Loki
 <p align="center"><img src="/image/loki_logo.png" width="40%" alt="Loki Logo" /></p>
-Repository containing the files for the Episode 2 of Is it Observable : K8s and Loki
 
 
 This repository showcase the usage of the Loki  by using GKE with :
